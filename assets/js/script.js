@@ -33,8 +33,20 @@ function renderQuestions(){
 function startTimer(){
     timerEl.textContent=timeRemaining--
 }
-function nextQuestion(){
+function nextQuestion(event){
+    index++
+    //only display all questions inside array
+    if(index < questionData.length){
+        renderQuestions()
+    }else{
+        // if you go beyond 5 questions
+        endQuiz()
+    }
+   
+}
 
+function endQuiz(){
+    clearInterval(setIntervalId)
 }
 startQuizEl.addEventListener("click", startQuiz) //call back
 choiceListEl.addEventListener("click", nextQuestion)
