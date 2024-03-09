@@ -18,15 +18,16 @@
     </header>
     
     <main>
-        <section id="intro">
+        <section id="intro"
+        >
             <h1>Coding Quiz Challenge</h1>
             <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat reprehenderit a deleniti eaque cum vel! A, soluta sequi cum deserunt numquam, delectus natus ad animi deleniti eos laboriosam cupiditate repudiandae!</P>
-            <button>Start Quiz</button>
+            <button id="start-quiz">Start Quiz</button>
         </section>
 
-        <section id="question-section">
-            <h1>Q1</h1>
-            <ol>
+        <section class="hide" id="question-section">
+            <h1 id="question-title">Q1</h1>
+            <ol id="choice-list">
                 <li> <button>choice 1</button> </li>
                 <li> <button>choice 2</button> </li>
                 <li> <button>choice 3</button> </li>
@@ -34,13 +35,13 @@
             </ol>
         </section>
 
-        <section id="initial-input">
+        <section class="hide" id="initial-input">
             <h1>All Done</h1>
             <p>Your Score is <span id="score">22</span></p>
             <label for="">Enter Intial</label> <input type="text" id="intial">
             <button id="submit"> Submit </button>
         </section>
-        <section id="highscore">
+        <section class="hide" id="highscore">
             <ol>
                 <li>AB - 22 </li>
                 <li>AB - 17 </li>
