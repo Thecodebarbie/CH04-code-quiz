@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -13,9 +14,43 @@
        <nav>
          <h3>Time: <span id="timer"></span></h3>
        </nav>
+
     </header>
     
-    
+    <main>
+        <section id="intro">
+            <h1>Coding Quiz Challenge</h1>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat reprehenderit a deleniti eaque cum vel! A, soluta sequi cum deserunt numquam, delectus natus ad animi deleniti eos laboriosam cupiditate repudiandae!</P>
+            <button>Start Quiz</button>
+        </section>
+
+        <section id="question-section">
+            <h1>Q1</h1>
+            <ol>
+                <li> <button>choice 1</button> </li>
+                <li> <button>choice 2</button> </li>
+                <li> <button>choice 3</button> </li>
+                <li> <button>choice 4</button> </li>
+            </ol>
+        </section>
+
+        <section id="initial-input">
+            <h1>All Done</h1>
+            <p>Your Score is <span id="score">22</span></p>
+            <label for="">Enter Intial</label> <input type="text" id="intial">
+            <button id="submit"> Submit </button>
+        </section>
+        <section id="highscore">
+            <ol>
+                <li>AB - 22 </li>
+                <li>AB - 17 </li>
+                <li>AB - 12 </li>
+                <li>AB - 8 </li>
+            </ol>
+            <button id="goback-btn">Go Back</button>
+            <button id="clearHighscore">Clear</button>
+        </section>
+    </main>
 
 
     <script src="./assets/js/script.js"></script>
