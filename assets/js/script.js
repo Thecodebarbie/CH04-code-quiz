@@ -17,7 +17,7 @@ function startQuiz(){
     introEl.classList.add('hide')
     questionSectionEl.classList.remove('hide')
 
-    setIntervalId=setInterval(startTimer , 1000)
+    setIntervalId=setInterval(startTimer , 1000) //1000ms => 1 sec
     renderQuestions()
 }
 function renderQuestions(){
@@ -65,5 +65,14 @@ function endQuiz(){
     initialInputEl.classList.remove("hide")
     scoreEl.textContent=timerEl.textContent
 }
+
+function getHighScore(){
+    return localStorage.getItem("highscore") || 0;
+}
+
+function updateHighScore(score){
+    localStorage.setItem("highscore", score)
+}
+
 startQuizEl.addEventListener("click", startQuiz) //call back
 choiceListEl.addEventListener("click", nextQuestion)
