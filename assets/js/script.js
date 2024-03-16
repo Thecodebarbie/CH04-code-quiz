@@ -1,3 +1,4 @@
+import questionData from "./questionData"
 var introEl = document.getElementById("intro")
 var questionSectionEl = document.getElementById("question-section")
 var initialInputEl = document.getElementById("initial-input")
@@ -8,10 +9,14 @@ var choiceListEl= document.getElementById("choice-list")
 var timerEl=document.getElementById("timer")
 var messageEl=document.getElementById("message")
 var scoreEl=document.getElementById("score")
-
+var submitBtn = document.getElementById("submit")
+var goBackBtn = document.getElementById("goback-btn")
+var clearHighScoreBtn = document.getElementById("clearHighscore")
+var enterInitialsEl = document.getElementById("enter-initials")
 var setIntervalId
 var timeRemaining=questionData.length*15
 var index=0
+console.log(index)
 
 function startQuiz(){
     introEl.classList.add('hide')
@@ -23,6 +28,7 @@ function startQuiz(){
 function renderQuestions(){
     messageEl.innerHTML=""
     questionTitleEl.textContent=questionData[index].title
+    console.log(questionData)
     choiceListEl.textContent=""
     for(var i=0; i<questionData[index].choices.length; i++){
         var li=document.createElement("li")

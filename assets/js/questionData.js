@@ -25,3 +25,5 @@ questionData=[
         solution: 'C1'
     },
 ]
+
+export default questionData;
