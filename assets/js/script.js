@@ -64,7 +64,7 @@ function nextQuestion(event) {
         // Increment index only when there are more questions available
         if (index + 1 < questionData.length) {
             index++; // Increment index
-            renderQuestions(); // Render the next question immediately
+            setTimeout(renderQuestions, 500); // Render the next question immediately
         } else {
             // If there are no more questions, end the quiz
             endQuiz();
@@ -76,7 +76,6 @@ function nextQuestion(event) {
     }
 }
 
-
 function endQuiz() {
     clearInterval(setIntervalId)
     questionSectionEl.classList.add("hide")
@@ -84,13 +83,65 @@ function endQuiz() {
     scoreEl.textContent = timerEl.textContent
 }
 
-function getHighScore() {
-    return localStorage.getItem("highscore") || 0;
+function storeUserInitials(initials){
+    localStorage.setItem("initials", initials);
 }
 
-function updateHighScore(score) {
-    localStorage.setItem("highscore", score)
+function submitInitials(event) {
+    event.preventDefault();
+
+    var initials = document.getElementById("enter-initials").value.trim();
+
+    if (initials !== "") {
+        var score = parseInt(document.getElementById("score").textContent);
+        updateHighScore(initials, score);
+        showHighScore(); // Update high score display
+        initialInputEl.classList.add("hide");
+        highscoreEl.classList.remove("hide");
+    } else {
+        alert("Please enter your initials.");
+    }
+}
+
+function showHighScore(){
+    // Clear previous high scores
+    var ol = document.getElementById("highscore").querySelector("ol");
+    ol.innerHTML = "";
+
+    var highScores = getHighScore(); // Get the high scores from localStorage
+
+    if (highScores.length > 0) {
+        // Loop through high scores and create list items
+        highScores.forEach(function (highScore) {
+            var li = document.createElement("li");
+            li.textContent = highScore.initials + " - " + highScore.score;
+            ol.appendChild(li);
+        });
+    }
+}
+
+function getHighScore() {
+    return JSON.parse(localStorage.getItem("highscore")) || 0;
+}
+
+function updateHighScore(initials, score) {
+    const highScores = JSON.parse(localStorage.getItem("highscore")) || [];
+
+    // Push the new high score to the array
+    highScores.push({ initials: initials, score: score });
+
+    // Sort the high scores by score in descending order
+    highScores.sort((a, b) => b.score - a.score);
+
+    // Keep only the top 4 high scores
+    const topHighScores = highScores.slice(0, 4);
+
+    // Store the top high scores back to local storage
+    localStorage.setItem("highscore", JSON.stringify(topHighScores));
+    
 }
 
 startQuizEl.addEventListener("click", startQuiz) //call back
 choiceListEl.addEventListener("click", nextQuestion)
+submitBtn.addEventListener("click", submitInitials);
+
