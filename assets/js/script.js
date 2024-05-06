@@ -12,6 +12,7 @@ var submitBtn = document.getElementById("submit")
 var goBackBtn = document.getElementById("goback-btn")
 var clearHighScoreBtn = document.getElementById("clearHighscore")
 var enterInitialsEl = document.getElementById("enter-initials")
+
 var setIntervalId
 console.log(questionData)
 var timeRemaining = questionData.length * 15
@@ -19,6 +20,9 @@ var index = 0
 console.log(index)
 
 function startQuiz() {
+    // Reset timer to initial value
+    timeRemaining = questionData.length * 15
+
     introEl.classList.add('hide')
     questionSectionEl.classList.remove('hide')
 
@@ -45,6 +49,9 @@ function renderQuestions() {
 }
 function startTimer() {
     timerEl.textContent = timeRemaining--
+    if(timeRemaining < 0){
+        endQuiz()
+    }
 }
 function nextQuestion(event) {
     var currentChoiceBtn = event.target;
@@ -103,6 +110,20 @@ function submitInitials(event) {
     }
 }
 
+// Defines function that handles "Go Back" button click
+function handleGoBack(){
+    introEl.classList.remove("hide")
+    highscoreEl.classList.add("hide")
+    index = 0
+   // startQuiz() // Starts the quiz again
+}
+
+// Defines function that handles 
+function handleClearHighscore(){
+    localStorage.removeItem("highscore")
+    showHighScore()
+}
+
 function showHighScore(){
     // Clear previous high scores
     var ol = document.getElementById("highscore").querySelector("ol");
@@ -113,7 +134,7 @@ function showHighScore(){
     if (highScores.length > 0) {
         // Loop through high scores and create list items
         highScores.forEach(function (highScore) {
-            var li = document.createElement("li");
+            var li = document.createElement("li"); //var li = "<li  </li>"
             li.textContent = highScore.initials + " - " + highScore.score;
             ol.appendChild(li);
         });
@@ -143,5 +164,7 @@ function updateHighScore(initials, score) {
 
 startQuizEl.addEventListener("click", startQuiz) //call back
 choiceListEl.addEventListener("click", nextQuestion)
-submitBtn.addEventListener("click", submitInitials);
+submitBtn.addEventListener("click", submitInitials)
+goBackBtn.addEventListener("click", handleGoBack)
+clearHighScoreBtn.addEventListener("click", handleClearHighscore)
 
