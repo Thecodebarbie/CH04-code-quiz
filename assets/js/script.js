@@ -27,6 +27,8 @@ function navigateToIntro() {
     if (introSection.classList.contains("hide")) {
         introSection.classList.remove("hide"); // Remove the hide class from intro section
         questionSectionEl.classList.add("hide"); // Hide the questions
+        clearInterval(setIntervalId); // Clear the timer
+        timerEl.textContent = ""; // Reset the timer display
     }
     introSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the intro section
 
