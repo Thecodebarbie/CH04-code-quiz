@@ -159,13 +159,21 @@ section {
     width: 40%;
     background-color: var(--glass-bck);
     backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
-    padding: 20px; /* Add padding for spacing */
+    padding-top: 20px; /* Add padding for spacing */
+    padding-bottom: 40px;
     border-radius: 15px; /* Add border radius for rounded corners */
-    padding: 7px;
     margin-top: 50px; 
     color: var(--intro-txt-color);
 }
 
+#initial-input h1 {
+    font-size: 30px;
+}
+
+#initial-input p {
+    font-size: 20px;
+    padding-top: 10px;
+}
 
 
 #highscore {
@@ -182,6 +190,7 @@ section {
     backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
     padding: 5px; /* Add padding for spacing */
     border-radius: 15px; /* Add border radius for rounded corners */
+    margin-top: 20px; 
 }
 #enter-initials::placeholder {
     text-align: center; /* Center the placeholder text */
