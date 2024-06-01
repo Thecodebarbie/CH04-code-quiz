@@ -1,32 +1,36 @@
-header{
+header {
     display: flex;
     flex-wrap: wrap;
 }
 
-header h3{
-    flex:1 0 20%;
-    background-color: blueviolet;
+header nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 100%;
+    text-align: center;
+    background-color: blueviolet; /* Optional: Add background color for visibility */
+    padding: 10px; /* Optional: Add padding for better spacing */
 }
 
-header nav{
-    flex:1 0 80%;
-    text-align: right;
+header nav h3, header nav h2 {
+    margin: 0;
 }
+
+header nav .nav-coding {
+    margin-right: 70px; /* Adjust this value as needed to create space */
+}
+
 section {
-    /* display: flex; */
-    /*justify-content: center;
-    /* flex-wrap: wrap;*/
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 960;
+    width: 960px;
 }
 
 .quiz-home {
     margin-top: 70px; /* Adjust as needed */
 }
 
-
-.hide{
+.hide {
     display: none;
 }
