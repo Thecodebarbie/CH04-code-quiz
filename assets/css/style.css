@@ -1,3 +1,10 @@
+body {
+    /* background-color: rgb(197, 164, 235); */
+    background-image: url("../images/quiz-bckgrnd.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -8,16 +15,21 @@ header nav {
     justify-content: space-between;
     flex: 1 0 100%;
     text-align: center;
-    background-color: blueviolet; /* Optional: Add background color for visibility */
-    padding: 10px; /* Optional: Add padding for better spacing */
+    background-color: rgb(80, 43, 115);
+    /* Optional: Add background color for visibility */
+    /* background-color: rgb(57, 6, 105); Optional: Add background color for visibility */
+    padding: 10px;
+    /* Optional: Add padding for better spacing */
 }
 
-header nav h3, header nav h2 {
+header nav h3,
+header nav h2 {
     margin: 0;
 }
 
 header nav .nav-coding {
-    margin-right: 90px; /* Adjust this value as needed to create space */
+    margin-right: 90px;
+    /* Adjust this value as needed to create space */
     color: rgb(232, 207, 255);
 }
 
@@ -29,9 +41,44 @@ section {
 }
 
 .quiz-home {
-    margin-top: 70px; /* Adjust as needed */
+    margin-top: 70px;
+    /* Adjust as needed */
 }
 
 .hide {
     display: none;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+
+    background-color: rgba(79, 41, 122, 0.3);
+    /* Cool deep plum color with 80% opacity */
+    padding: 20px;
+    /* Add padding for spacing */
+    border-radius: 15px;
+    /* Add border radius for rounded corners */
+    backdrop-filter: blur(10px);
+    /* Apply backdrop filter for glassmorphism effect */
+
+
+}
+
+
+#intro h1 {
+    font-size: 2em;
+    /* Adjust the font size as needed */
+}
+
+#intro p {
+    margin-top: 10px;
+    /* Add space below the paragraph */
+}
+
+#intro>button {
+    margin-top: 10px;
+    /* Add space above the button */
 }
