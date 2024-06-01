@@ -19,6 +19,21 @@ var timeRemaining = questionData.length * 15
 var index = 0
 console.log(index)
 
+// Define a function to navigate to the intro section without starting the quiz
+function navigateToIntro() {
+// Define the function to navigate to the intro section without starting the quiz
+
+    var introSection = document.getElementById("intro");
+    if (introSection.classList.contains("hide")) {
+        introSection.classList.remove("hide"); // Remove the hide class from intro section
+        questionSectionEl.classList.add("hide"); // Hide the questions
+    }
+    introSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the intro section
+
+    console.log('link clicked')
+}
+
+
 function startQuiz() {
     // Reset timer to initial value
     timeRemaining = questionData.length * 15
@@ -167,4 +182,6 @@ choiceListEl.addEventListener("click", nextQuestion)
 submitBtn.addEventListener("click", submitInitials)
 goBackBtn.addEventListener("click", handleGoBack)
 clearHighScoreBtn.addEventListener("click", handleClearHighscore)
+document.getElementById("start-quiz-link").addEventListener("click", navigateToIntro);
+
 
