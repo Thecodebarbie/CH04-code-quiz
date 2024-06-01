@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <h3>View Highscore</h3>
 
-       <nav>
-         <h3>Time: <span id="timer"></span></h3>
-       </nav>
+        <nav>
+            <h3>Time: <span id="timer"></span></h3>
+        </nav>
 
     </header>
-    
+
     <main>
-        <section id="intro">
+        <!-- <section id="intro" class="quiz-home">
             <h1>Coding Quiz Challenge</h1>
-            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat reprehenderit a deleniti eaque cum vel! A, soluta sequi cum deserunt numquam, delectus natus ad animi deleniti eos laboriosam cupiditate repudiandae!</P>
+            <P>Let your code speak volumes! Are you up for the coding challeng</P>
             <button id="start-quiz">Start Quiz</button>
+        </section> -->
+        <section id="intro" class="mx-auto w-100 text-center p-5 m-5 lg:mx-0 ltr:lg:text-left rtl:lg:text-right flex justify-center">
+            <div class="bg-purple-300 w-1/2 p-5">
+                <h2 class="text-3xl font-bold sm:text-4xl">Coding Quiz Challenge</h2>
+
+                <p class="mt-4 text-gray-600">
+                    Let your code speak volumes! Are you up for the coding challeng
+                </p>
+    
+                <a id="start-quiz" href="#"
+                    class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                    Start Quiz
+                </a>
+            </div>
+            
         </section>
+
         <section class="hide" id="question-section">
             <h1 id="question-title">Q1</h1>
             <ol id="choice-list">
-                <li> <button>choice 1</button> </li>
-                <li> <button>choice 2</button> </li>
-                <li> <button>choice 3</button> </li>
-                <li> <button>choice 4</button> </li>
+                <li> <button></button> </li>
+                <li> <button></button> </li>
+                <li> <button></button> </li>
+                <li> <button></button> </li>
             </ol>
-             <label id="message"></label>
+            <label id="message"></label>
         </section>
         <section class="hide" id="initial-input">
             <h1>All Done</h1>
@@ -54,4 +75,5 @@
     <script src="./assets/js/questionData.js "></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
