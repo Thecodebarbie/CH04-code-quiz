@@ -50,6 +50,7 @@ function renderQuestions() {
     messageEl.innerHTML = ""
     if (index < questionData.length) {
         questionTitleEl.textContent = questionData[index].title
+        questionTitleEl.classList.add("question-title"); // Add class to question title
         choiceListEl.textContent = ""
         for (var i = 0; i < questionData[index].choices.length; i++) {
             var li = document.createElement("li")

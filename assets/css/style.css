@@ -78,6 +78,8 @@ section {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor style */
     transition: background-color 0.3s; /* Smooth transition for background color */
+    margin: 3px; /* Adjust the margin value as needed */
+
 }
 
 
@@ -145,4 +147,9 @@ section {
     padding: 20px; /* Add padding for spacing */
     border-radius: 15px; /* Add border radius for rounded corners */
     backdrop-filter: blur(10px); /* Apply backdrop filter for glassmorphism effect */
+}
+
+.question-title {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add space between the question and the buttons */
 }
