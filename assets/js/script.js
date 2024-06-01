@@ -36,6 +36,17 @@ function navigateToIntro() {
 }
 
 
+function navigateToHighscore() {
+    introEl.classList.add("hide");
+    questionSectionEl.classList.add("hide");
+    initialInputEl.classList.add("hide");
+    highscoreEl.classList.remove("hide");
+
+    highscoreEl.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+
 function startQuiz() {
     // Reset timer to initial value
     timeRemaining = questionData.length * 15
@@ -189,5 +200,8 @@ submitBtn.addEventListener("click", submitInitials)
 goBackBtn.addEventListener("click", handleGoBack)
 clearHighScoreBtn.addEventListener("click", handleClearHighscore)
 document.getElementById("start-quiz-link").addEventListener("click", navigateToIntro);
-
+document.getElementById("view-highscore-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    navigateToHighscore();
+});
 
