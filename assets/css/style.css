@@ -55,6 +55,8 @@ section {
     align-items: center;
     /* Center items horizontally */
 
+    margin-top: 9%;
+
     background-color: rgba(79, 41, 122, 0.3);
     /* Cool deep plum color with 80% opacity */
     padding: 20px;
