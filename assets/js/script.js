@@ -56,6 +56,9 @@ function renderQuestions() {
             var button = document.createElement("button")
             button.textContent = questionData[index].choices[i]
 
+            // Apply styles to the button
+            button.classList.add("choice-button"); // Add a class for styling
+
             li.appendChild(button)
             choiceListEl.appendChild(li)
         }
