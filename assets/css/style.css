@@ -58,7 +58,7 @@ section {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 /* styling for answer buttons */
@@ -152,6 +152,7 @@ section {
     padding: 20px; /* Add padding for spacing */
     border-radius: 15px; /* Add border radius for rounded corners */
     backdrop-filter: blur(10px); /* Apply backdrop filter for glassmorphism effect */
+    margin-top: 100px; 
 }
 
 #initial-input {
@@ -161,15 +162,18 @@ section {
     padding: 20px; /* Add padding for spacing */
     border-radius: 15px; /* Add border radius for rounded corners */
     padding: 7px;
+    margin-top: 50px; 
+    color: var(--intro-txt-color);
 }
 
 
 
 #highscore {
-    background-color: var(--glass-bck); /* Semi-transparent white background */
-    backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
-    padding: 20px; /* Add padding for spacing */
-    border-radius: 15px; /* Add border radius for rounded corners */
+    background-color: var(--glass-bck); 
+    backdrop-filter: blur(10px); 
+    padding: 20px; 
+    border-radius: 15px;
+    margin-top: 100px; 
 }
 
 #enter-initials {
