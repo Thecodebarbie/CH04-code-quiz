@@ -222,7 +222,7 @@ section {
 }
 
 #initial-input {
-    width: 40%;
+    width: 60%;
     background-color: var(--glass-bck);
     backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
     padding-top: 20px; /* Add padding for spacing */
@@ -286,3 +286,22 @@ section {
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s;
 }
+
+/* Media query for screens with a minimum width of 576px*/
+    @media (max-width: 576px) {
+        #intro {
+            width: 80%; /* Adjust width for small to medium-sized screens */
+        }
+
+        #question-section{
+            width: 80%; 
+        }
+
+        #intial-input{
+            width: 90%; 
+        }
+
+        #highscore{
+            width: 90%; 
+        }
+    } 
