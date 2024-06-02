@@ -8,6 +8,7 @@ This is a coding quiz challenge web application where users can test their codin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Dark Mode](#dark-mode)
 - [Credits](#credits)
 - [License](#license)
 
@@ -75,6 +76,11 @@ This is a coding quiz challenge web application where users can test their codin
 11. **Persistent Data**
     - Save and retrieve high scores from local storage.
     - Ensure high scores are retained across sessions.
+
+12. **Mobile Responsive**
+
+    - A media query targets devices with a minimum width of 576px. 
+    - Ensures the section adapts to smaller screen sizes, improving readability and accessibility.
 
 ## Dark Mode 
 
