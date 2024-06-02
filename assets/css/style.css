@@ -26,10 +26,8 @@ header nav {
     background-color: rgba(80, 43, 115, 0.4); /* Deep plum color with transparency */
     backdrop-filter: blur(10px); /* Apply backdrop filter for glassmorphism effect */
 
-    /* Optional: Add background color for visibility */
-    /* background-color: rgb(57, 6, 105); Optional: Add background color for visibility */
     padding: 10px;
-    /* Optional: Add padding for better spacing */
+
     color: var(--text-color);
 }
 
@@ -40,8 +38,7 @@ header nav h2 {
 
 header nav .nav-coding {
     margin-right: 90px;
-    /* Adjust this value as needed to create space */
-    /* color: rgb(232, 207, 255); */
+
     color: var(--intro-txt-color);
 }
 
@@ -185,7 +182,7 @@ section {
 }
 
 #enter-initials {
-    background-color: var(--end-quiz-color); /* Semi-transparent white background */
+    background-color: var(--end-quiz-color); 
     color: var(--intro-txt-color);
     backdrop-filter: blur(10px); /* Apply backdrop filter for glass effect */
     padding: 5px; /* Add padding for spacing */
