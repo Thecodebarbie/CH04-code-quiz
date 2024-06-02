@@ -159,6 +159,27 @@ function updateHighScore(initials, score) {
     localStorage.setItem("highscore", JSON.stringify(topHighScores));
 }
 
+
+/*function to toggle dark mode for #intro*/
+function toggleDarkMode() {
+    var checkbox = document.getElementById("checkbox");
+    
+    if (checkbox.checked) {
+        // Dark mode enabled
+        introEl.style.backgroundColor = "rgba(24, 3, 47, 0.469)";
+        introEl.style.color = "white"; // Adjust text color accordingly
+        questionSectionEl.style.backgroundColor = "rgba(24, 3, 47, 0.469)";
+        initialInputEl.style.backgroundColor = "rgba(24, 3, 47, 0.469)";
+        highscoreEl.style.backgroundColor = "rgba(24, 3, 47, 0.469)";
+    } else {
+        // Dark mode disabled
+        introEl.style.backgroundColor = "rgba(79, 41, 122, 0.3)"; // Reset to original background color
+        introEl.style.color = "var(--intro-txt-color)"; // Reset to original text color
+    }
+}
+
+
+
 startQuizEl.addEventListener("click", startQuiz);
 choiceListEl.addEventListener("click", nextQuestion);
 submitBtn.addEventListener("click", submitInitials);
@@ -169,3 +190,4 @@ document.getElementById("view-highscore-link").addEventListener("click", functio
     event.preventDefault();
     navigateToHighscore();
 });
+checkbox.addEventListener("change", toggleDarkMode);
