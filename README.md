@@ -8,6 +8,7 @@ This is a coding quiz challenge web application where users can test their codin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Screen Shots](#screen-shots)
 - [Dark Mode](#dark-mode)
 - [Credits](#credits)
 - [License](#license)
@@ -82,7 +83,19 @@ This is a coding quiz challenge web application where users can test their codin
     - A media query targets devices with a minimum width of 576px. 
     - Ensures the section adapts to smaller screen sizes, improving readability and accessibility.
 
+## Screen Shots 
+
+![Coding Quiz](./assets/images/coding-quiz.jpg)
+![Coding Quiz](./assets/images/questions.png)
+![Coding Quiz](./assets/images/highscore.png)
+
+
+
+
+
 ## Dark Mode 
+
+![Coding Quiz](./assets/images/dark-mode.png)
 
 #### Implementation Details
 1. **Toggle Switch**: A toggle switch has been implemented using and is represented by three bars that rotate upon activation, providing visual feedback to the user.
